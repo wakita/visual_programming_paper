@@ -1,0 +1,20 @@
+LATEX = platex
+LATEXFLAGS = -shell-escape
+DVIPDFM = dvipdfmx # -l
+BIBTEX = pbibtex
+
+BIB = $(HOME)/research
+TEXINPUTS = :.//:$(BIB)
+
+LaTeXDocument(main, main)
+
+.DEFAULT: main.pdf
+
+.PHONY: debug
+	echo $(TEXINPUTS)
+
+clean:
+	/bin/rm -f *.{aux,bbl,blg,dvi,fls,log}
+
+p: main.pdf
+	/usr/bin/open -a Preview main.pdf

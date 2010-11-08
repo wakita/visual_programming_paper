@@ -1,0 +1,8 @@
+.PHONY: clean
+.PHONY: p
+
+open build/LaTeX
+
+DefineCommandVars()
+
+.SUBDIRS: .
