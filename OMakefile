@@ -14,7 +14,7 @@ LaTeXDocument(main, main)
 	echo $(TEXINPUTS)
 
 clean:
-	/bin/rm -f *.{aux,bbl,blg,dvi,fls,log}
+	/bin/rm -f *.{aux,bbl,blg,dvi,fls,log,out}
 
 p: main.pdf
 	/usr/bin/open -a Preview main.pdf
